@@ -1,4 +1,4 @@
-export ZSH=/root/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
@@ -49,7 +49,10 @@ ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-plugins=(git bundler osx tmux python google)
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_FIXTERM=true
+plugins=(git bundler osx tmux python google web-search)
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_FIXTERM=true
+ZSH_TMUX_ITERM2=true
+
+source $ZSH/oh-my-zsh.sh
 export ZSH=$HOME/.oh-my-zsh
