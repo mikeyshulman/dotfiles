@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export SEC=$HOME/.secrets.sh
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
@@ -6,7 +7,7 @@ HISTSIZE=1000000
 alias li='arc lint'
 alias nb='ipython notebook'
 alias klenv='source kml/bin/activate'
-alias kensho-learn='cd /home/kensho-learn'
+alias kl='cd ~/Dropbox/kensho/kensho-learn'
 alias killjobs='kill -9 $(jobs -p)'
 alias utest='py.test tests/test_everything.py'
 alias tf='py.test /home/kensho-learn/tests/test_everything.py::Flowcast'
@@ -59,5 +60,13 @@ ZSH_TMUX_FIXTERM=true
 #ZSH_TMUX_ITERM2=true
 #ZSH_TMUX_AUTOSTART=true
 
-source $ZSH/oh-my-zsh.sh
 export ZSH=$HOME/.oh-my-zsh
+source $SEC
+source $ZSH/oh-my-zsh.sh
+
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/shleifer/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/shleifer/google-cloud-sdk/completion.zsh.inc'
