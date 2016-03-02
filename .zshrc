@@ -49,4 +49,5 @@ ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+plugins=(git bundler osx tmux python)
 export ZSH=$HOME/.oh-my-zsh
