@@ -2,12 +2,6 @@ export ZSH=/root/.oh-my-zsh
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
-
-
-export ZSH=/root/.oh-my-zsh
-HISTFILESIZE=1000000
-HISTSIZE=1000000
-
 # Kensho specific
 alias li='arc lint'
 alias nb='ipython notebook'
@@ -53,5 +47,6 @@ alias glog='git log --pretty=format:"%h %s" HEAD~3..HEAD'
 
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
-export ZSH=$HOME/.oh-my-zsh
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+export ZSH=$HOME/.oh-my-zsh
