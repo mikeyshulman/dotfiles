@@ -38,6 +38,7 @@ alias vimrc='vim ~/.vimrc'
 
 #git stuff
 alias g='git'
+alias gcm='git checkout master'
 alias gcam='git commit -am '
 alias gs='git status'
 alias gs='git status'
