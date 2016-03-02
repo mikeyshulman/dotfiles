@@ -1,5 +1,9 @@
-set backupskip=/tmp/*,/private/tmp/*"
+" Sam Shleifer 2016 Nov 24
+set nocompatible              " be iMproved, required
+set backspace=indent,eol,start
+filetype off                  " required
 " set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'  " New line!!
@@ -17,75 +21,114 @@ Plugin 'https://github.com/tpope/vim-surround.git'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-autocmd BufWritePre * :%s/\s\+$//e
-imap <silent> <Down> <C-o>gj
-imap <silent> <Up> <C-o>gk
-nmap <silent> <Down> gj
-nmap <silent> <Up> gk
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-filetype plugin on
+"SYNTASTIC SETTINGS
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225'
+"NerdTree Toggle
+
+"Split Navigation without w
+"from https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+
+"Disable Arrow Keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+autocmd BufWritePre *.py :%s/\s\+$//e  " Delete trailing whitespace in python
+
+" Nerd tree optimization
+" autocmd VimEnter * NERDTree
+" autocmd VimEnter * wincmd p
+
+" set tabs to 4
+"
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
-set ignorecase
 set expandtab
+"set smartindent
+set wrap
+
+filetype plugin on
+set ignorecase
 set wildmenu
 set number
-set tw=100
 set confirm
-set visualbell
-set cinoptions=t0,+2,(2,u2,w1
-set softtabstop=4
+set noerrorbells
+"set visualbell
+"FOLDING
 set hidden
 set foldmethod=indent
-" autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 sts=2
-nmap s :w <enter>
-nmap Q :q <enter>
-nmap <space> i_<esc>r
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+set foldlevelstart=20
+"autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 sts=2
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 sts=4
 
-set history=50	 " keep 50 lines of command line history
-set ruler	 " show the cursor position all the time
-set showcmd	 " display incomplete commands
-set incsearch	 " do incremental searching
+
+set history=64   " keep 50 lines of command line history
+set ruler    " show the cursor position all the time
+set showcmd  " display incomplete commands
+"set incsearch   " do incremental searching
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-set backupdir=~/.backup
-set directory=~/.backup
+"set backupdir=~/.backup
+"set directory=~/.backup
 set noswapfile
 let mapleader = ","
-map <leader>o :enew<enter>
+map <leader>d :r !date<ENTER><esc>
 map <leader>n :bnext<ENTER>
 map <leader>b :bprev<ENTER>
-map <leader>r :set colorcolumn=100<enter>
-map <leader>l :set colorcolumn=0<enter>
+map <leader>r :set colorcolumn=100<ENTER>
 map <leader>1 :set invnu<enter>
 map <leader>c :bp <BAR> bd #<enter>
 map <leader>m :noh <enter>
+map <Leader>a <plug>NERDTreeTabsToggle<CR>
 map <leader>t :TagbarOpenAutoClose<enter>
-map <leader>a :Ack
+map <leader>f :NERDTreeToggle<ENTER>
+"map <leader>a :git grep
 map <leader>l :CtrlPBuffer<enter>
-noremap ! :mksession! s <CR> :qall!<enter>
-noremap ~ :qall<enter>
-inoremap jk <ESC>
-vnoremap . :norm.<CR>
-"set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim
+set pastetoggle=<leader>z
+
+"vnoremap . :norm.<CR>
 set laststatus=2
+
+"Allow solarized to function nicely
 set t_Co=256
-execute pathogen#infect()
-filetype plugin indent on
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 
-colorscheme solarized
-set background=dark
+" Saving, escaping, quitting
+inoremap jk <ESC>
+"noremap jk <ESC>
+nmap s :w <enter>
+nmap Q :q <enter>
+
+noremap ! :mksession! s <CR> :qall!<enter>
+
 " auto-update vimrc
 augroup reload_vimrc " {
     autocmd!
@@ -98,41 +141,46 @@ set laststatus=2
 set noshowmode
 
 " Airline
-" let g:airline_powerline_fonts = 1
-
-" set encryption method to blowfish
-set cryptmethod=blowfish
-
-function! s:ExecuteInShell(command, bang)
-    let _ = a:bang != '' ? s:_ : a:command == '' ? '' : join(map(split(a:command), 'expand(v:val)'))
-
-    if (_ != '')
-        let s:_ = _
-        let bufnr = bufnr('%')
-        let winnr = bufwinnr('^' . _ . '$')
-        silent! execute  winnr < 0 ? 'new ' . fnameescape(_) : winnr . 'wincmd w'
-        setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap
-        silent! :%d
-        let message = 'Execute ' . _ . '...'
-        call append(0, message)
-        echo message
-        silent! 2d | resize 1 | redraw
-        silent! execute 'silent! %!'. _
-        silent! execute 'resize ' . line('$')
-        silent! execute 'autocmd BufUnload <buffer> execute bufwinnr(' . bufnr . ') . ''wincmd w'''
-        silent! execute 'autocmd BufEnter <buffer> execute ''resize '' .  line(''$'')'
-        silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . _ . ''', '''')<CR>'
-        silent! execute 'nnoremap <silent> <buffer> <LocalLeader>g :execute bufwinnr(' . bufnr . ') . ''wincmd w''<CR>'
-    endif
-endfunction
-
+let g:airline_powerline_fonts = 1
 command! -complete=shellcmd -nargs=* -bang Shell call s:ExecuteInShell(<q-args>, '<bang>')
 cabbrev shell Shell
 
 " Convenient command to see the difference between the current buffer and the
 " file it was loaded from, thus the changes you made.
 " Only define it when not defined already.
-if !exists(":DiffOrig")
+if !exists(":Diff")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
   \ | wincmd p | diffthis
 endif
+
+au BufNewFile,BufRead *.c,*.cc,*.h,*.java,*.py match TooLong /\%<99v.\%>101v/
+  hi link TooLong Warning
+  hi Warning ctermbg=Grey ctermfg=DarkRed
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|data\|log\|tmp\|migrations\|node_modules\|bower_components$\|venv\|vendor',
+  \ 'file': '\.pyc\|\.exe$\|\.so$\|\.dat$'
+  \ }
+
+
+function! Selecta(choice_command, selecta_args, vim_command)
+  try
+    let selection = system(a:choice_command . " | selecta " . a:selecta_args)
+  catch /Vim:Interrupt/
+    redraw!
+    return
+  endtry
+  redraw!
+  exec a:vim_command . " " . selection
+endfunction
+
+function! GitGrep()
+  let takeFile = "\| cut -d: -f 1"
+  let search = input("> ")
+  call Selecta("git grep \"" . search . "\"", takeFile, ":e")
+endfunction
+
+
+
+nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":e") <CR>
+nnoremap <leader>g :call GitGrep() <CR>
