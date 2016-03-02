@@ -19,18 +19,7 @@ alias ix="open -a Safari index.html"
 alias sg="open -a Safari steamgraph.html"
 alias c3="open -a Safari chart3.html"
 alias save_texts="cp ~/imsg_stats/msg.csv ~/Dropbox/Archive/imsg_files/msg.csv"
-export EDITOR=vim
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-mvim () {
-    local f
-    for f; do
-        test -e "$f" || touch "$f"
-    done
-    open -a macvim "$@"
-}
-alias wsim="python word_similarity.py tom_sawyer.txt tiny.txt top_100.txt pos_wallstreet.txt 5"
 # Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="random"
@@ -43,3 +32,8 @@ alias zshrc='vim ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias bashcp='cp ~/.zshrc ~/.bashrc'
 alias im='~/imsg_stats'
+
+export EDITOR=vim
+export ZSH=$HOME/.oh-my-zsh
+
+

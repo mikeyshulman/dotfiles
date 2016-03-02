@@ -25,26 +25,14 @@ filetype plugin indent on    " required
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-
-
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
-
 "let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225'
-"NerdTree Toggle
-
-"Split Navigation without w
-"from https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 set splitbelow
 set splitright
-
 
 "Disable Arrow Keys
 noremap <Up> <NOP>
@@ -82,7 +70,7 @@ set foldlevelstart=20
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 sts=4
 
 
-set history=64   " keep 50 lines of command line history
+set history=64   " keep 64 lines of command line history
 set ruler    " show the cursor position all the time
 set showcmd  " display incomplete commands
 "set incsearch   " do incremental searching
@@ -90,10 +78,8 @@ set showcmd  " display incomplete commands
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
-
-"set backupdir=~/.backup
-"set directory=~/.backup
 set noswapfile
+
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
 map <leader>n :bnext<ENTER>
