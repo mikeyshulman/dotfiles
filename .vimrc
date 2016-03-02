@@ -1,4 +1,3 @@
-" When started as "evim", evim.vim will already have done these settings.
 set backupskip=/tmp/*,/private/tmp/*"
 " set the runtime path to include Vundle and initialize
 call vundle#begin()
@@ -17,8 +16,6 @@ Plugin 'hynek/vim-python-pep9-indent'
 Plugin 'https://github.com/tpope/vim-surround.git'
 call vundle#end()            " required
 filetype plugin indent on    " required
-set grepprg=grep\ -nH\ $*    "for vim-latex
-let g:tex_flavor='latex'
 
 autocmd BufWritePre * :%s/\s\+$//e
 imap <silent> <Down> <C-o>gj
@@ -87,12 +84,8 @@ set background=dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 
-colorscheme monokai
-"call togglebg#map("<F5>")
-
-"let g:molokai_original = 1
-" smarter search (normal regex)
-
+colorscheme solarized
+set background=dark
 " auto-update vimrc
 augroup reload_vimrc " {
     autocmd!
@@ -143,12 +136,3 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
   \ | wincmd p | diffthis
 endif
-
-"R-plugin stuff
-"let maplocalleader = ","
-"vmap <Space> <Plug>RDSendSelection
-"nmap <Space> <Plug>RDSendLine
-"let vimrplugin_applescript=0
-"let vimrplugin_vsplit=1
-
-"autocmd BufRead,BufNewFile *.Rnw set filetype=tex
