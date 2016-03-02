@@ -37,15 +37,6 @@ alias v='vim'
 alias vt='vim tests/test_everything.py'
 alias vimrc='vim ~/.vimrc'
 
-#git stuff
-alias g='git'
-alias gcm='git checkout master'
-alias gcam='git commit -am '
-alias gs='git status'
-alias gs='git status'
-alias gpo='git push origin'
-alias gdmo='git diff master --name-only'
-alias glog='git log --pretty=format:"%h %s" HEAD~3..HEAD'
 
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
@@ -63,6 +54,16 @@ ZSH_TMUX_FIXTERM=true
 export ZSH=$HOME/.oh-my-zsh
 source $SEC
 source $ZSH/oh-my-zsh.sh
+
+#git stuff
+alias g='git'
+alias gcm='git checkout master'
+alias gcam='git commit -am '
+alias gs='git status'
+alias gs='git status'
+alias gpo='git push origin'
+alias gdmo='git diff master --name-only'
+alias glog='git log --pretty=format:"%h %s" HEAD~3..HEAD'
 
 
 # The next line updates PATH for the Google Cloud SDK.
