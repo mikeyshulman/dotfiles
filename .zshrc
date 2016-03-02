@@ -50,10 +50,14 @@ ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-plugins=(git bundler osx tmux python google web-search)
-ZSH_TMUX_AUTOSTART=true
+plugins=(git bundler tmux python google web-search)
+# git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
+# python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
+# tmux: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/tmux/tmux.plugin.zsh
+
 ZSH_TMUX_FIXTERM=true
-ZSH_TMUX_ITERM2=true
+#ZSH_TMUX_ITERM2=true
+#ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 export ZSH=$HOME/.oh-my-zsh
