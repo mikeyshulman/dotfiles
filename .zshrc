@@ -41,7 +41,7 @@ alias vimrc='vim ~/.vimrc'
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
+export PATH="$PATH:$ARCPATH"
 plugins=(git bundler tmux python google web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
@@ -71,3 +71,6 @@ source '/Users/shleifer/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/shleifer/google-cloud-sdk/completion.zsh.inc'
+
+export NVM_DIR="/Users/shleifer/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
