@@ -42,13 +42,13 @@ ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:$ARCPATH"
-plugins=(git bundler tmux python google web-search)
+plugins=(git bundler tmux python web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
 # tmux: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/tmux/tmux.plugin.zsh
 
 ZSH_TMUX_FIXTERM=true
-#ZSH_TMUX_ITERM2=true
+ZSH_TMUX_ITERM2=true
 #ZSH_TMUX_AUTOSTART=true
 
 export ZSH=$HOME/.oh-my-zsh
