@@ -7,27 +7,26 @@ HISTSIZE=1000000
 alias li='arc lint'
 alias nb='ipython notebook'
 alias klenv='source kml/bin/activate'
-alias kl='cd ~/db/kensho/kensho-learn'
+alias kl='cd ~/Dropbox/kensho/kensho-learn'
 alias killjobs='kill -9 $(jobs -p)'
 alias utest='py.test tests/test_everything.py'
 alias tf='py.test /home/kensho-learn/tests/test_everything.py::Flowcast'
 alias rmpyc='find . -iname \*.pyc -delete'
 export ptest='py.test /home/kensho-learn/tests/test_everything.py::'
 alias tslow='py.test tests/test_everything.py --runslow'
-alias tdb='py.test tests/test_everything.py::TestDashboard'
 
 #imsg stats shortcuts
-alias im='~/db/projects/imsg_stats'
+alias im='~/Dropbox/projects/imsg_stats'
 alias ix="open -a Safari index.html"
 alias sg="open -a Safari steamgraph.html"
 alias c3="open -a Safari chart3.html"
-alias save_texts="cp ~/imsg_stats/msg.csv ~/db/Archive/imsg_files/msg.csv"
+alias save_texts="cp ~/imsg_stats/msg.csv ~/Dropbox/Archive/imsg_files/msg.csv"
 
 #misc aliases
 alias muxer='tmux source ~/.tmux.conf'
 alias muxrc='vim ~/.tmux.conf'
-alias nba="~/db/nba-api"
-alias mlb="~/db/nba-api/mlb_dfk"
+alias nba="~/Dropbox/nba-api"
+alias mlb="~/Dropbox/nba-api/mlb_dfk"
 alias bundle='cd ~/.vim/bundle'
 alias ipy="ipython --profile=sam"
 alias c='clear'
