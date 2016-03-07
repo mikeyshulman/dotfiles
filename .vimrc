@@ -79,6 +79,7 @@ set showcmd  " display incomplete commands
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 set noswapfile
+set colorcolumn=100
 
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
