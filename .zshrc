@@ -63,7 +63,7 @@ alias gs='git status'
 alias gpo='git push origin'
 alias gdmo='git diff master --name-only'
 alias glog='git log --pretty=format:"%h %s" HEAD~3..HEAD'
-
+alias mgd="git grep '==='"  # check for merge conflicts
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/shleifer/google-cloud-sdk/path.zsh.inc'
