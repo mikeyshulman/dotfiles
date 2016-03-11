@@ -21,15 +21,6 @@ Plugin 'https://github.com/tpope/vim-surround.git'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"SYNTASTIC SETTINGS
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_flake8_post_args='--ignore=E501,E128,E225,E731'
 
 set splitbelow
 set splitright
