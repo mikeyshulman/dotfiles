@@ -11,7 +11,7 @@ alias kl='cd ~/flow/kensho-learn'
 alias killjobs='kill -9 $(jobs -p)'
 alias utest='py.test tests/*.py'
 alias tf='py.test /home/kensho-learn/tests/test_everything.py::Flowcast'
-alias rmpyc='find . -iname \*.pyc -delete'
+alias rmpyc='sudo find . -iname \*.pyc -delete'
 export ptest='py.test /home/kensho-learn/tests/test_everything.py::'
 alias tslow='py.test tests/test_everything.py --runslow'
 
