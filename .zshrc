@@ -46,13 +46,6 @@ plugins=(git bundler python web-search)
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
 # tmux: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/tmux/tmux.plugin.zsh
 
-#ZSH_TMUX_FIXTERM=true
-#ZSH_TMUX_ITERM2=true
-#ZSH_TMUX_AUTOSTART=true
-
-export ZSH=$HOME/.oh-my-zsh
-source $SEC
-source $ZSH/oh-my-zsh.sh
 
 #git stuff
 alias g='git'
@@ -73,3 +66,8 @@ source '/Users/shleifer/google-cloud-sdk/completion.zsh.inc'
 
 export NVM_DIR="/Users/shleifer/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export ZSH=$HOME/.oh-my-zsh
+source $SEC  # ssh config etc
+source $ZSH/oh-my-zsh.sh
+
+
