@@ -9,6 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'  " New line!!
 "Plugin 'Valloric/YouCompleteMe'
 " Above requires lots of work
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/kien/ctrlp.vim'
@@ -33,6 +34,7 @@ noremap <Right> <NOP>
 
 autocmd BufWritePre *.py :%s/\s\+$//e  " Delete trailing whitespace in python
 
+let g:SimpylFold_docstring_preview = 1
 " Nerd tree optimization
 " autocmd VimEnter * NERDTree
 " autocmd VimEnter * wincmd p
