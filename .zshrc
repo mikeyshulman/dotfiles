@@ -69,5 +69,3 @@ export NVM_DIR="/Users/shleifer/.nvm"
 export ZSH=$HOME/.oh-my-zsh
 source $SEC  # ssh config etc
 source $ZSH/oh-my-zsh.sh
-
-
