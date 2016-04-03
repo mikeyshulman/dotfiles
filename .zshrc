@@ -6,7 +6,7 @@ HISTSIZE=1000000
 # Kensho specific
 alias li='arc lint'
 alias nb='ipython notebook'
-alias klenv='source kml/bin/activate'
+alias klenv='source /Users/shleifer/flow/kensho-learn/kml/bin/activate'
 alias kl='cd ~/flow/kensho-learn'
 alias killjobs='kill -9 $(jobs -p)'
 alias utest='py.test tests/*.py'
@@ -69,3 +69,4 @@ export NVM_DIR="/Users/shleifer/.nvm"
 export ZSH=$HOME/.oh-my-zsh
 source $SEC  # ssh config etc
 source $ZSH/oh-my-zsh.sh
+klenv
