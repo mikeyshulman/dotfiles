@@ -40,7 +40,6 @@ alias vimrc='vim ~/.vimrc'
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH="$PATH:$ARCPATH"
 plugins=(git bundler python web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
