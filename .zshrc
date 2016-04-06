@@ -35,7 +35,10 @@ alias zshrc='vim ~/.zshrc'
 alias v='vim'
 alias vt='vim tests/test_everything.py'
 alias vimrc='vim ~/.vimrc'
-
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+export PROMPT_COMMAND='echo -ne "\033]0;sam\007"'
 
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
@@ -69,3 +72,5 @@ export ZSH=$HOME/.oh-my-zsh
 source $SEC  # ssh config etc
 source $ZSH/oh-my-zsh.sh
 klenv
+DISABLE_AUTO_TITLE="true"
+title local
