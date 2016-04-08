@@ -15,6 +15,9 @@ alias rmpyc='sudo find . -iname \*.pyc -delete'
 
 #kensho-learn py.test
 alias utest='py.test tests/*.py --tb=short'
+alias rmt='py.test tests/test_mbs.py --tb=short'
+alias mt='vim tests/test_mbs.py'
+
 alias tf='py.test /home/kensho-learn/tests/test_everything.py::Flowcast'
 export ptest='py.test /home/kensho-learn/tests/test_everything.py::'
 alias tslow='py.test tests/test_everything.py --runslow'
