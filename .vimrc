@@ -10,6 +10,7 @@ Plugin 'altercation/vim-colors-solarized'  " New line!!
 "Plugin 'Valloric/YouCompleteMe'
 " Above requires lots of work
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/kien/ctrlp.vim'
@@ -92,6 +93,8 @@ set pastetoggle=<leader>z
 "vnoremap . :norm.<CR>
 set laststatus=2
 
+"gitgutter compares current file to master
+let g:gitgutter_diff_args = 'master'
 "Allow solarized to function nicely
 set t_Co=256
 syntax enable
