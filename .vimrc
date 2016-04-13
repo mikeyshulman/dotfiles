@@ -24,6 +24,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+ab dbg import ipdb; ipdb.set_trace()
+
 set splitbelow
 set splitright
 
