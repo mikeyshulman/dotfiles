@@ -45,6 +45,11 @@ alias vimrc='vim ~/.vimrc'
 function title {
     echo -ne "\033]0;"$*"\007"
 }
+
+t () {
+    py.test tests/test_$1.py --tb=short --maxfail=1
+}
+
 DISABLE_AUTO_TITLE="true"
 title local
 
