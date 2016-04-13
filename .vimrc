@@ -59,7 +59,7 @@ set noerrorbells
 "FOLDING
 set hidden
 set foldmethod=indent
-set foldlevelstart=20
+set foldlevelstart=0
 "autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 sts=2
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 sts=4
 
