@@ -7,7 +7,6 @@ HISTSIZE=1000000
 
 # Kensho specific
 alias li='arc lint'
-#alias ls='ls --hide="*.pyc"'
 alias nb='ipython notebook'
 alias klenv='source /Users/shleifer/flow/kensho-learn/kml/bin/activate'
 alias kl='cd ~/flow/kensho-learn'
