@@ -1,6 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 source $HOME/.secrets.sh
-source $HOME/aliases/git.sh
+source $HOME/aliases/*.sh
 
 HISTFILESIZE=1000000
 HISTSIZE=1000000
