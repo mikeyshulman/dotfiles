@@ -4,7 +4,7 @@ source $HOME/aliases/*.sh
 
 HISTFILESIZE=1000000
 HISTSIZE=1000000
-
+alias svrunner='runsvdir -P /usr/local/var/service'
 # Kensho specific
 alias li='arc lint'
 alias nb='ipython notebook'
