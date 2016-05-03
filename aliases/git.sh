@@ -1,5 +1,6 @@
 #aliases that start with g and run git commands
 alias g='git'
+alias gg='git grep'
 alias gd='git diff'
 alias gdm='git diff master'
 alias gcm='git checkout master'
