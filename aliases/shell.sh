@@ -4,3 +4,6 @@ if $(gls &>/dev/null); then
    alias ll="gls -l --color"		
    alias la='gls -A --color'		
 fi
+
+
+# alias rm_space="find -name "* *" -type f | rename 's/ /_/g'"

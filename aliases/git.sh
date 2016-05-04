@@ -13,6 +13,7 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias mgd="git grep '==='"  # check for merge conflicts
 alias undo='git reset --soft HEAD^'
 alias pcheck='git diff master | grep print'
+alias galias='vim ~/aliases/git.sh'
 gday () {
     git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
     }
