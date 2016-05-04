@@ -48,7 +48,9 @@ function title {
 }
 
 t () {
-    py.test tests/test_$1.py --tb=short --maxfail=1
+    fname=$1
+    shift
+    py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
 }
 
 DISABLE_AUTO_TITLE="true"
