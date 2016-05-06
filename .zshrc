@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-source $HOME/.secrets.sh
+source ~/.secrets.sh
 source $HOME/aliases/*.sh
 
 HISTFILESIZE=1000000
@@ -8,6 +8,7 @@ alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 # Kensho specific
 alias li='arc lint'
+alias ad="arc diff --verbatim --reviewers='#L'"
 alias nb='ipython notebook'
 alias klenv='source /Users/shleifer/flow/kensho-learn/kml/bin/activate'
 alias kl='cd ~/flow/kensho-learn'
@@ -77,5 +78,6 @@ export NVM_DIR="/Users/shleifer/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+source ~/.secrets.sh
 #
 klenv  # source venv
