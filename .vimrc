@@ -77,6 +77,9 @@ inoremap <C-U> <C-G>u<C-U>
 set noswapfile
 set colorcolumn=100
 
+vnoremap <leader>p !sort -k2 <CR>
+nmap t :tabnew  klearn/
+
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
 map <leader>n :bnext<ENTER>
@@ -111,7 +114,6 @@ inoremap jk <ESC>
 "noremap jk <ESC>
 nmap s :w <enter>
 nmap Q :q <enter>
-
 noremap ! :mksession! s <CR> :qall!<enter>
 
 " auto-update vimrc
@@ -162,10 +164,9 @@ endfunction
 function! GitGrep()
   let takeFile = "\| cut -d: -f 1"
   let search = input("> ")
-  call Selecta("git grep \"" . search . "\"", takeFile, ":e")
+  call Selecta("git grep \"" . search . "\"", takeFile, ":tabnew")
 endfunction
-
-
 
 nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":e") <CR>
 nnoremap <leader>g :call GitGrep() <CR>
+
