@@ -1,5 +1,3 @@
-export ZSH=$HOME/.oh-my-zsh
-source ~/.secrets.sh
 source $HOME/aliases/*.sh
 
 HISTFILESIZE=1000000
