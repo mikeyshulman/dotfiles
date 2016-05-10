@@ -167,6 +167,6 @@ function! GitGrep()
   call Selecta("git grep \"" . search . "\"", takeFile, ":tabnew")
 endfunction
 
-nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":e") <CR>
+nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":tabnew") <CR>
 nnoremap <leader>g :call GitGrep() <CR>
 
