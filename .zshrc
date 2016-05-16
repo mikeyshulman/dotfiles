@@ -51,6 +51,11 @@ t () {
     shift
     py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
 }
+p () {
+    fname=$1
+    shift
+    PYTHONPATH=$PYTHONPATH:$PWD python klearn/$fname.py "$@"
+}
 
 DISABLE_AUTO_TITLE="true"
 title local
