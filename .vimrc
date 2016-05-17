@@ -114,6 +114,8 @@ inoremap jk <ESC>
 "noremap jk <ESC>
 nmap s :w <enter>
 nmap Q :q <enter>
+nmap Y y$
+nmap D d$
 noremap ! :mksession! s <CR> :qall!<enter>
 
 " auto-update vimrc
