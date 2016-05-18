@@ -4,9 +4,12 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
+alias bm='go build; ./bee'
 # Kensho specific
 alias li='arc lint'
 alias ad="arc diff --verbatim --reviewers='#L'"
+alias og='~/work/src/github.com/sshleifer/'
+alias cos='~/Dropbox/projects/costic'
 alias nb='ipython notebook'
 alias klenv='source /Users/shleifer/flow/kensho-learn/kml/bin/activate'
 alias kl='cd ~/flow/kensho-learn'

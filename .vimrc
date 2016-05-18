@@ -15,6 +15,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -112,6 +113,9 @@ let g:solarized_contrast = "high"
 " Saving, escaping, quitting
 inoremap jk <ESC>
 "noremap jk <ESC>
+nmap J 10j
+nmap K 10k
+
 nmap s :w <enter>
 nmap Q :q <enter>
 nmap Y y$
