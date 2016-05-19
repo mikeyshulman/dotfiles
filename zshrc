@@ -1,6 +1,6 @@
 source $HOME/dotfiles/aliases/*.sh
 source ~/.secrets.sh
-alias kl=$KL
+alias kl=$kl
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 alias svrunner='runsvdir -P /usr/local/var/service'
