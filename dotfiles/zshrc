@@ -39,10 +39,10 @@ alias muxrc='vim ~/.tmux.conf'
 alias ipy="ipython --profile=sam"
 alias c='clear'
 alias zsher='source ~/.zshrc'
-alias zshrc='vim ~/.zshrc'
+alias zshrc='vim ~/dotfiles/zshrc'
 alias v='vim'
 alias vt='vim tests/test_everything.py'
-alias vimrc='vim ~/.vimrc'
+alias vimrc='vim ~/dotfiles/vimrc'
 
 # title iTerm tabs
 function title {
