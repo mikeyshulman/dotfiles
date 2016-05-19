@@ -5,6 +5,7 @@ HISTSIZE=1000000
 alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias bm='go build; ./bee'
+alias dot='cd ~/dotfiles'
 # Kensho specific
 export sam='sam@kensho.com'
 alias li='arc lint'
