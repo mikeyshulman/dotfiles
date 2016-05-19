@@ -6,6 +6,7 @@ alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias bm='go build; ./bee'
 # Kensho specific
+export sam='sam@kensho.com'
 alias li='arc lint'
 alias ad="arc diff --verbatim --reviewers='#L'"
 alias og='~/work/src/github.com/sshleifer/'
@@ -20,18 +21,8 @@ alias rmpyc='sudo find . -iname \*.pyc -delete'
 alias utest='py.test tests/*.py --tb=short'
 alias rmt='py.test tests/test_mbs.py --tb=short'
 alias mt='vim tests/test_mbs.py'
-
-alias tf='py.test /home/kensho-learn/tests/test_everything.py::Flowcast'
 export ptest='py.test /home/kensho-learn/tests/test_everything.py::'
 alias tslow='py.test tests/test_everything.py --runslow'
-
-#imsg stats shortcuts
-alias im='~/Dropbox/projects/imsg_stats'
-alias ix="open -a Safari index.html"
-alias sg="open -a Safari steamgraph.html"
-alias c3="open -a Safari chart3.html"
-alias save_texts="cp ~/imsg_stats/msg.csv ~/Dropbox/Archive/imsg_files/msg.csv"
-
 
 #misc aliases
 alias muxer='tmux source ~/.tmux.conf'
@@ -49,11 +40,20 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
-t () {
+tshort () {
     fname=$1
     shift
     py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
 }
+
+tinfo () {
+    fname=$1
+    text=$2
+    shift
+    py.test tests/test_$fname.py::$info --tb=short --maxfail=1  "$@"
+}
+
+
 p () {
     fname=$1
     shift
@@ -76,7 +76,6 @@ plugins=(git bundler python web-search)
 
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/shleifer/google-cloud-sdk/path.zsh.inc'
-
 # The next line enables shell command completion for gcloud.
 source '/Users/shleifer/google-cloud-sdk/completion.zsh.inc'
 
@@ -85,5 +84,4 @@ export NVM_DIR="/Users/shleifer/.nvm"
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
-#
 klenv  # source venv
