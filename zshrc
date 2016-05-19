@@ -1,5 +1,6 @@
 source $HOME/dotfiles/aliases/*.sh
-
+source ~/.secrets.sh
+alias kl=$KL
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 alias svrunner='runsvdir -P /usr/local/var/service'
@@ -13,7 +14,6 @@ alias ad="arc diff --verbatim --reviewers='#L'"
 alias og='~/work/src/github.com/sshleifer/'
 alias cos='~/Dropbox/projects/costic'
 alias nb='ipython notebook'
-alias kl='cd ~/flow/kensho-learn'
 alias killjobs='kill -9 $(jobs -p)'
 alias rmpyc='sudo find . -iname \*.pyc -delete'
 
