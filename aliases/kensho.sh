@@ -18,7 +18,9 @@ t () {
 }
 
 pt () { 
-    py.test tests/test_$1
+    fname=$1
+    shift
+    py.test tests/test_$fname "$@"
 }
 
 tinfo () {

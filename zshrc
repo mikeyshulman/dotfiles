@@ -43,7 +43,6 @@ function title {
 
 
 DISABLE_AUTO_TITLE="true"
-title local
 
 
 ZSH_THEME="robbyrussell"
