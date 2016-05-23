@@ -41,29 +41,6 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
-t () {
-    fname=$1
-    shift
-    py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
-}
-
-pt () { 
-    py.test tests/test_$fname
-}
-
-tinfo () {
-    fname=$1
-    text=$2
-    shift
-    py.test tests/test_$fname.py::$info --tb=short --maxfail=1  "$@"
-}
-
-
-p () {
-    fname=$1
-    shift
-    PYTHONPATH=$PYTHONPATH:$PWD python klearn/$fname.py "$@"
-}
 
 DISABLE_AUTO_TITLE="true"
 title local
@@ -71,7 +48,7 @@ title local
 
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 plugins=(git bundler python web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
