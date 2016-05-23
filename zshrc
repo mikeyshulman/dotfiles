@@ -1,8 +1,9 @@
-source $HOME/dotfiles/aliases/*.sh
+source ~/dotfiles/aliases/*.sh
 source ~/.secrets.sh
 alias kl=$kl
 HISTFILESIZE=1000000
 HISTSIZE=1000000
+alias ag='ag --pager less -S --ignore tmp --ignore migrations --ignore fixtures --ignore node_modules --ignore dist --ignore static --ignore webpack-build --ignore js-coverage'
 alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias bm='go build; ./bee'
@@ -40,10 +41,14 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
-tshort () {
+t () {
     fname=$1
     shift
     py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
+}
+
+pt () { 
+    py.test tests/test_$fname
 }
 
 tinfo () {
