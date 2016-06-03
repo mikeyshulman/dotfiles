@@ -1,4 +1,3 @@
-source ~/dotfiles/aliases/*.sh
 source ~/.secrets.sh
 alias kl=$kl
 HISTFILESIZE=1000000
@@ -57,4 +56,5 @@ plugins=(git bundler python web-search)
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
+for f in ~/dotfiles/aliases/*; do source $f; done
 klenv  # source venv
