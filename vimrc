@@ -31,7 +31,7 @@ Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'https://github.com/tpope/vim-surround.git'
 call vundle#end()            " required

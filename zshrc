@@ -17,23 +17,16 @@ alias nb='ipython notebook'
 alias killjobs='kill -9 $(jobs -p)'
 alias rmpyc='sudo find . -iname \*.pyc -delete'
 
-#kensho-learn py.test
-alias utest='py.test tests/*.py --tb=short'
-alias rmt='py.test tests/test_mbs.py --tb=short'
-alias mt='vim tests/test_mbs.py'
-export ptest='py.test /home/kensho-learn/tests/test_everything.py::'
-alias tslow='py.test tests/test_everything.py --runslow'
 
 #misc aliases
+alias v='vim'
+alias vimrc='vim ~/dotfiles/vimrc'
 alias muxer='tmux source ~/.tmux.conf'
 alias muxrc='vim ~/.tmux.conf'
 alias ipy="ipython --profile=sam"
 alias c='clear'
 alias zsher='source ~/.zshrc'
 alias zshrc='vim ~/dotfiles/zshrc'
-alias v='vim'
-alias vt='vim tests/test_everything.py'
-alias vimrc='vim ~/dotfiles/vimrc'
 
 # title iTerm tabs
 function title {

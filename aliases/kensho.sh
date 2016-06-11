@@ -17,11 +17,6 @@ t () {
     py.test tests/test_$fname.py --tb=short --maxfail=1  "$@"
 }
 
-pt () { 
-    fname=$1
-    shift
-    py.test tests/test_$fname "$@"
-}
 
 tinfo () {
     fname=$1
@@ -36,4 +31,14 @@ p () {
     shift
     PYTHONPATH=$PYTHONPATH:$PWD python klearn/$fname.py "$@"
 }
+prun () {
+    PYTHONPATH=$PYTHONPATH:$PWD python klearn/run.py --to sam@kensho.com  "$@"
+}
+
+#kensho-learn py.test
+alias rmt='py.test tests/test_mbs.py --tb=short'
+alias vmt='vim tests/test_mbs.py'
+alias vt='vim tests/test_everything.py'
+alias utest='py.test tests/*.py --tb=short'
+alias tslow='py.test tests/test_everything.py --runslow --tb=short'
 
