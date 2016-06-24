@@ -119,14 +119,14 @@ nmap t :tabnew  klearn/
 
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
-map <leader>n :bnext<ENTER>
-map <leader>b :bprev<ENTER>
+"map <leader>n :bnext<ENTER>
+"map <leader>b :bprev<ENTER>
 map <leader>r :set colorcolumn=100<ENTER>
 map <leader>1 :set invnu<enter>
 map <leader>c :bp <BAR> bd #<enter>
 map <leader>m :noh <enter>
 map <leader>a <plug>NERDTreeTabsToggle<CR>
-map <leader>t :tabnew tests/test_mbs.py<ENTER>
+map <leader>t :tabnew tests/test_
 map <leader>f :NERDTreeToggle<ENTER>
 "map <leader>a :git grep
 map <leader>l :CtrlPBuffer<enter>
