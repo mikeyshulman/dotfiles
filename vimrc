@@ -125,8 +125,8 @@ map <leader>r :set colorcolumn=100<ENTER>
 map <leader>1 :set invnu<enter>
 map <leader>c :bp <BAR> bd #<enter>
 map <leader>m :noh <enter>
-map <Leader>a <plug>NERDTreeTabsToggle<CR>
-map <leader>t :TagbarOpenAutoClose<enter>
+map <leader>a <plug>NERDTreeTabsToggle<CR>
+map <leader>t :tabnew tests/test_mbs.py<ENTER>
 map <leader>f :NERDTreeToggle<ENTER>
 "map <leader>a :git grep
 map <leader>l :CtrlPBuffer<enter>
