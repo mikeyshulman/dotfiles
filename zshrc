@@ -1,4 +1,6 @@
 source ~/.secrets.sh
+
+
 alias kl=$kl
 HISTFILESIZE=1000000
 HISTSIZE=1000000
@@ -16,6 +18,11 @@ alias cos='~/Dropbox/projects/costic'
 alias nb='ipython notebook'
 alias killjobs='kill -9 $(jobs -p)'
 alias rmpyc='sudo find . -iname \*.pyc -delete'
+
+# The next line updates PATH for the Google Cloud SDK.
+source "${HOME}/google-cloud-sdk/path.zsh.inc"
+# The next line enables shell command completion for gcloud.
+source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 
 
 #misc aliases
