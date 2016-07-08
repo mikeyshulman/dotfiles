@@ -41,4 +41,4 @@ alias vmt='vim tests/test_mbs.py'
 alias vt='vim tests/test_everything.py'
 alias utest='py.test tests/*.py --tb=short'
 alias tslow='py.test tests/test_everything.py --runslow --tb=short'
-
+alias klenv='source kml/bin/activate'
