@@ -1,9 +1,10 @@
-#aliases that start with g and run git commands
+#aliases that start with g and run git commands, similar stuff in gitconfig
 alias g='git'
 alias gg='git grep'
 alias gd='git diff'
 alias gdm='git diff master'
 alias gdmno='git diff master --name -only'
+alias gwho='git config --list'
 alias dbranch='git branch -d'
 alias gcm='git checkout master'
 alias gcam='git commit -am '

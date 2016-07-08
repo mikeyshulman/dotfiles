@@ -14,6 +14,7 @@ export sam='sam@kensho.com'
 alias li='arc lint'
 alias ad="arc diff --verbatim --reviewers='#L'"
 alias og='~/work/src/github.com/sshleifer/'
+
 alias cos='~/Dropbox/projects/costic'
 alias nb='ipython notebook'
 alias killjobs='kill -9 $(jobs -p)'
