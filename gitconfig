@@ -1,0 +1,29 @@
+[push]
+	default = simple
+[user]
+	name = sshleifer
+	email = sam@kensho.com
+[alias]
+        la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+        g= grep
+        churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $2 "," $2}'
+        d= diff
+        co= checkout
+        cob = checkout -b
+        dm= diff master
+        ds = diff --stat
+        dms = diff master --stat
+        dmno= diff master --name -only
+        dbranch= branch -d
+        cm= checkout master
+        cam= commit -am 
+        s= status -sb
+        pom= pull origin master
+        dmo= diff master --name-only
+        log=log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        undo= reset --soft HEAD^
+        pcheck= diff master | !grep print
+        br= for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+        replace = grep -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
+        #dmgd= branch --merged | grep -v "\*" | grep -v master | grep -v dev | xargs -n 1 git branch -d
+        mm= merge master
