@@ -4,6 +4,12 @@ vk () {
     vim klearn/$fname.py 
 }
 
+vt () {
+    fname=$1
+    shift
+    vim tests/test_$fname.py 
+}
+
 vkc () {
     fname=$1
     shift
@@ -37,8 +43,9 @@ prun () {
 
 #kensho-learn py.test
 alias rmt='py.test tests/test_mbs.py --tb=short'
+alias rms='py.test tests/test_mbs.py --tb=short --runslow'
 alias vmt='vim tests/test_mbs.py'
-alias vt='vim tests/test_everything.py'
+alias vte='vim tests/test_everything.py'
 alias utest='py.test tests/*.py --tb=short'
 alias tslow='py.test tests/test_everything.py --runslow --tb=short'
 alias klenv='source kml/bin/activate'
