@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 export EDITOR=vim
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-plugins=(git bundler python web-search)
+plugins=(git python web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
 # tmux: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/tmux/tmux.plugin.zsh
