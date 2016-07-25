@@ -116,9 +116,9 @@ noremap <Right> <NOP>
 
 vnoremap <leader>p !sort -k2 <CR>
 nmap t :tabnew  klearn/
-map <leader>i :r import ipdb; ipdb.set_trace()<ESC>
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
+map <leader>i iimport ipdb; ipdb.set_trace()<ESC>
 "map <leader>n :bnext<ENTER>
 "map <leader>b :bprev<ENTER>
 map <leader>r :set colorcolumn=100<ENTER>
