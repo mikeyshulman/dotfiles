@@ -62,8 +62,13 @@ set noerrorbells
 "set visualbell
 "FOLDING
 set hidden
-set foldmethod=indent
+" set foldmethod=indent
 set foldlevelstart=0
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
+let g:SimpylFold_docstring_preview = 1
+let g:SimpylFold_fold_import = 1
+let g:SimpylFold_fold_docstring = 1
 
 
 set history=64   " keep 64 lines of command line history
@@ -79,7 +84,7 @@ set colorcolumn=100
 
 set splitbelow
 set splitright
-let g:SimpylFold_docstring_preview = 1
+
 
 set laststatus=2
 
