@@ -41,11 +41,16 @@ prun () {
     PYTHONPATH=$PYTHONPATH:$PWD python klearn/run.py --to sam@kensho.com  "$@"
 }
 
+utest () {
+    py.test tests/test_*.py  --tb=short "$@";
+    find . -iname \*.pyc -delete
+}
+
+
 #kensho-learn py.test
 alias rmt='py.test tests/test_mbs.py --tb=short'
 alias rms='py.test tests/test_mbs.py --tb=short --runslow'
 alias vmt='vim tests/test_mbs.py'
 alias vte='vim tests/test_everything.py'
-alias utest='py.test tests/*.py --tb=short'
 alias tslow='py.test tests/test_everything.py --runslow --tb=short'
 alias klenv='source kml/bin/activate'

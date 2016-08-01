@@ -18,7 +18,7 @@ alias og='~/work/src/github.com/sshleifer/'
 alias cos='~/Dropbox/projects/costic'
 alias nb='ipython notebook'
 alias killjobs='kill -9 $(jobs -p)'
-alias rmpyc='sudo find . -iname \*.pyc -delete'
+alias rmpyc='find . -iname \*.pyc -delete'
 
 # The next line updates PATH for the Google Cloud SDK.
 source "${HOME}/google-cloud-sdk/path.zsh.inc"
