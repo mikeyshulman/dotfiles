@@ -59,11 +59,12 @@ set wildmenu
 set number
 set confirm
 set noerrorbells
+set tags=~/tags
 "set visualbell
 "FOLDING
 set hidden
 " set foldmethod=indent
-set foldlevelstart=0
+set foldlevelstart=1
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 let g:SimpylFold_docstring_preview = 1
