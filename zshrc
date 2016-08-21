@@ -1,6 +1,6 @@
 source ~/.secrets.sh
 
-
+alias k='kubectl' 
 alias kl=$kl
 HISTFILESIZE=1000000
 HISTSIZE=1000000
