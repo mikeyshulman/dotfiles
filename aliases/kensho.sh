@@ -4,7 +4,7 @@ vk () {
     vim klearn/$fname.py 
 }
 
-vt () {
+function vt {
     fname=$1
     shift
     vim tests/test_$fname.py 
@@ -52,5 +52,6 @@ alias rmt='py.test tests/test_mbs.py --tb=short'
 alias rms='py.test tests/test_mbs.py --tb=short --runslow'
 alias vmt='vim tests/test_mbs.py'
 alias vte='vim tests/test_everything.py'
+alias ct='vim -t'
 alias tslow='py.test tests/test_everything.py --runslow --tb=short'
 alias klenv='source kml/bin/activate'
