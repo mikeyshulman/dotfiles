@@ -33,7 +33,9 @@ Plugin 'fatih/vim-go'
 Plugin 'scrooloose/syntastic'
 " Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
-Plugin 'https://github.com/tpope/vim-surround.git'
+Plugin 'tpope/vim-surround.git'
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -91,6 +93,10 @@ set laststatus=2
 
 "gitgutter compares current file to master
 let g:gitgutter_diff_args = 'master'
+
+let g:notes_directories = ['~/Dropbox/kensho/notes']
+let g:notes_suffix = '.txt'
+
 "Allow solarized to function nicely
 set t_Co=256
 syntax enable
