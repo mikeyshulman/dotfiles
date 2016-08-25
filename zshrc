@@ -1,6 +1,6 @@
 source ~/.secrets.sh
 
-
+alias k='kubectl' 
 alias kl=$kl
 alias pt='py.test'
 HISTFILESIZE=1000000
