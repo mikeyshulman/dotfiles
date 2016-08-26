@@ -94,7 +94,7 @@ set laststatus=2
 "gitgutter compares current file to master
 let g:gitgutter_diff_args = 'master'
 
-let g:notes_directories = ['~/Dropbox/kensho/notes']
+let g:notes_directories = ['~/flow/notes'] 
 let g:notes_suffix = '.txt'
 
 "Allow solarized to function nicely
