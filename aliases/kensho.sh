@@ -4,6 +4,12 @@ vk () {
     vim klearn/$fname.py 
 }
 
+run_tsdb() {
+    cd ~/flow/zentreefish/projects/tsdb/app;
+    inenv tsdb;
+    ./run_tsdb.py
+}
+
 function vt {
     fname=$1
     shift

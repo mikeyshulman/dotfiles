@@ -5,6 +5,7 @@ source ~/.secrets.sh
 # Source Prezto.
 
 alias k='kubectl' 
+alias pyp='pip freeze | grep '
 alias kl=$kl
 alias pt='py.test'
 HISTFILESIZE=1000000
