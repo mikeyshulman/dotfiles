@@ -3,9 +3,6 @@ source ~/.secrets.sh
 
 
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-      source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
 
 alias k='kubectl' 
 alias kl=$kl
@@ -18,6 +15,7 @@ alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias ctags="`brew --prefix`/bin/ctags"
 alias bm='go build; ./bee'
 alias dot='cd ~/dotfiles'
+alias mfree="top -l 1 -s 0 | grep PhysMem | sed 's/, /\n         /g'"
 # Kensho specific
 export sam='sam@kensho.com'
 alias li='arc lint'
