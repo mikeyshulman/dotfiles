@@ -1,0 +1,28 @@
+
+Things I had to do:
+- clone dotfiles
+- make_symlinks.sh 
+- add ~/.secrets.sh
+- https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+- clone klearn
+
+Burndown:
+- run unittests
+- get_close
+- flow data
+- notebook
+- todo tracker
+
+
+
+# TODO(SS): should not require .secrets, should not make oh-my-zsh
+
+
+
+Questions:
+    flipping mouse back to mac settings clone 
+    pre install google sdk stuff
+
+Longer term:
+
+- Trello CLI?

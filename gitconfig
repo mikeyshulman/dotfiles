@@ -14,7 +14,7 @@
         ds = diff --stat
         dms = diff master --stat
         dmno= diff master --name -only
-        dbranch= branch -d
+        dbranch= branch -D
         cm= checkout master
         cam= commit -am 
         s= status -sb

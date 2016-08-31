@@ -1,14 +1,22 @@
 source ~/.secrets.sh
 
 
+
+# Source Prezto.
+
+alias k='kubectl' 
+alias pyp='pip freeze | grep '
 alias kl=$kl
+alias pt='py.test'
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 alias ag='ag --pager less -S --ignore tmp --ignore migrations --ignore fixtures --ignore node_modules --ignore dist --ignore static --ignore webpack-build --ignore js-coverage'
 alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
+alias ctags="`brew --prefix`/bin/ctags"
 alias bm='go build; ./bee'
 alias dot='cd ~/dotfiles'
+alias mfree="top -l 1 -s 0 | grep PhysMem | sed 's/, /\n         /g'"
 # Kensho specific
 export sam='sam@kensho.com'
 alias li='arc lint'
@@ -58,4 +66,6 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
 for f in ~/dotfiles/aliases/*; do source $f; done
+
+source /Users/shleifer/flow/zentreefish/.inenv/inenv.sh
 klenv  # source venv
