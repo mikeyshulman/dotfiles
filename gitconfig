@@ -29,3 +29,4 @@
         mm= merge master
 [core]
 	editor = vim
+	mergeoptions = --no-edit
