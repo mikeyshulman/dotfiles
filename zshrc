@@ -16,7 +16,7 @@ alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias ctags="`brew --prefix`/bin/ctags"
 alias bm='go build; ./bee'
 alias dot='cd ~/dotfiles'
-alias mfree="top -l 1 -s 0 | grep PhysMem | sed 's/, /\n         /g'"
+alias mfree="top -l 1 -s 0 | grep PhysMem" 
 # Kensho specific
 export sam='sam@kensho.com'
 alias li='arc lint'
