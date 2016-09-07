@@ -1,6 +1,3 @@
-export ORANGE_SERVER='http://10.145.32.1:8080'  #FIXME
-export GREEN_SERVER='http://10.147.32.1:8080'  #FIXME
-
 alias kgp='k get pods'
 winfo () {
     echo "stty rows $LINES columns $COLUMNS; reset"
