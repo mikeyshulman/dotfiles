@@ -66,6 +66,8 @@ export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
 for f in ~/dotfiles/aliases/*; do source $f; done
+title `hostname`:`whoami`
+if $(gls &>/dev/null); then
 
 source /Users/shleifer/flow/zentreefish/.inenv/inenv.sh
 klenv  # source venv
