@@ -1,37 +1,23 @@
 source ~/.secrets.sh
-
-
-
-# Source Prezto.
+HISTFILESIZE=1000000
+HISTSIZE=1000000
 
 alias k='kubectl' 
 alias pyp='pip freeze | grep '
 alias kl=$kl
 alias pt='py.test'
-HISTFILESIZE=1000000
-HISTSIZE=1000000
 alias ag='ag --pager less -S --ignore tmp --ignore migrations --ignore fixtures --ignore node_modules --ignore dist --ignore static --ignore webpack-build --ignore js-coverage'
-alias svrunner='runsvdir -P /usr/local/var/service'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
-alias ctags="`brew --prefix`/bin/ctags"
-alias bm='go build; ./bee'
 alias dot='cd ~/dotfiles'
-alias mfree="top -l 1 -s 0 | grep PhysMem" 
+
 # Kensho specific
 export sam='sam@kensho.com'
 alias li='arc lint'
 alias ad="arc diff --verbatim --reviewers='#L'"
-alias og='~/work/src/github.com/sshleifer/'
 
-alias cos='~/Dropbox/projects/costic'
-alias nb='ipython notebook'
+alias nb='jupyter notebook'
 alias killjobs='kill -9 $(jobs -p)'
 alias rmpyc='find . -iname \*.pyc -delete'
-
-# The next line updates PATH for the Google Cloud SDK.
-source "${HOME}/google-cloud-sdk/path.zsh.inc"
-# The next line enables shell command completion for gcloud.
-source "${HOME}/google-cloud-sdk/completion.zsh.inc"
 
 
 #misc aliases
@@ -44,13 +30,12 @@ alias c='clear'
 alias zsher='source ~/.zshrc'
 alias zshrc='vim ~/dotfiles/zshrc'
 
-# title iTerm tabs
+# title tabs
 function title {
     echo -ne "\033]0;"$*"\007"
 }
 
-
-DISABLE_AUTO_TITLE="true"
+#DISABLE_AUTO_TITLE="true"
 
 
 ZSH_THEME="robbyrussell"
@@ -67,7 +52,3 @@ source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
 for f in ~/dotfiles/aliases/*; do source $f; done
 title `hostname`:`whoami`
-if $(gls &>/dev/null); then
-
-source /Users/shleifer/flow/zentreefish/.inenv/inenv.sh
-klenv  # source venv
