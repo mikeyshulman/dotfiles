@@ -21,26 +21,6 @@ alias nb-ip="kd $(dnb | awk -F ' ' '{print $2}') | grep '^ip' -i"
 alias nby="google-chrome $(nb-ip | awk -F ' ' '{print $2}'):8888"
 
 
-# TODO: fix for orange
 alias fnb="k describe pods | grep '^name.*flowcast-prod' -i"
 alias fnb-ip="k describe pods $(fnb | awk -F ' ' '{print $2}') | grep '^ip' -i"
 alias fnby="google-chrome $(fnb-ip | awk -F ' ' '{print $2}'):8888/"
-
-
-
-korange() {
-    color='orange'
-    k config set-cluster $color --server=$ORANGE_SERVER
-    k config set-context $color --cluster $color
-    k config use-context $color
-}
-
-
-kgreen() {
-    color='green'
-    k config set-cluster $color --server=$GREEN_SERVER
-    k config set-context $color --cluster $color
-    k config use-context $color
-}
-
-
