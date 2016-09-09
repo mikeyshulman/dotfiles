@@ -120,12 +120,6 @@ cabbrev shell Shell
 " 04. Vim mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Disable Arrow Keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
 vnoremap <leader>p !sort -k2 <CR>
 nmap t :tabnew  klearn/
 let mapleader = ","
