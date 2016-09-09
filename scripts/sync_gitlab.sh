@@ -1,7 +1,7 @@
-#!/bin/bash
-gco glab-master
-g pull glab
-gco master
-g merge glab-master
-g push
+#!/bin/zsh
+git checkout glab-master
+git pull glab
+git checkout master
+git merge glab-master
+git push
 
