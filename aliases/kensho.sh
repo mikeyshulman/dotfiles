@@ -62,12 +62,4 @@ alias vmt='vim tests/test_mbs.py'
 alias vte='vim tests/test_everything.py'
 alias ct='vim -t'
 alias tslow='py.test tests/test_everything.py --runslow --tb=short'
-alias klenv='source kml/bin/activate'
-
 alias newtags='ctags -f ~/tags -R kensho-learn/*'
-
-alias knb="kubectl describe pods | grep '^name.*notebook-andrew' -i"
-alias knb-ip="kubectl describe pods $(knb | awk -F ' ' '{print $2}') | grep '^ip' -i"
-alias nby="google-chrome $(knb-ip | awk -F ' ' '{print $2}'):8888/notebooks/user_data/notebooks"
-
-
