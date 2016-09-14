@@ -2,5 +2,7 @@
 
 cp -R /app/user_data/.ssh ~
 cp -R /app/user_data/dotfiles ~
+cp -R /app/user_data/.vim ~
 cd ~/dotfiles
-git log
+./setup.sh
+source ~/.zshrc
