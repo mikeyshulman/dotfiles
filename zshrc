@@ -3,7 +3,8 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 
 alias k='kubectl' 
-alias pyp='pip freeze | grep '
+alias pyg='pip freeze | grep'
+alias pg='ps aux | grep'
 alias kl=$kl
 alias pt='py.test'
 alias ag='ag --pager less -S --ignore tmp --ignore migrations --ignore fixtures --ignore node_modules --ignore dist --ignore static --ignore webpack-build --ignore js-coverage'
