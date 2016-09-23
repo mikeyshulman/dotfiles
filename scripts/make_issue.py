@@ -3,7 +3,7 @@ import os
 
 
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN')
-URL = 'https://gitlab.kensho.com'
+URL = os.environ.get('GITLAB_URL', 'https://gitlab.kensho.com')
 
 
 def get_client(private_token=PRIVATE_TOKEN, url=URL):
@@ -35,9 +35,10 @@ def get_issues(project=None):
 
 
 def delete_issue(title, project=None, **kwargs):
+    raise NotImplementedError
     if project is None:
         project = get_projects()['kensho-learn']
-    return project.issues().delete(title, **kwargs)
+    return project.issues.delete(title, **kwargs)
 
 
 @click.command()
