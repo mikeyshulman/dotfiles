@@ -31,7 +31,7 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     alias knb="kubectl describe pods | grep '^name.*notebook-andrew' -i"
     alias knb-ip="kubectl describe pods $(knb | awk -F ' ' '{print $2}') | grep '^ip' -i"
     alias nby="google-chrome $(knb-ip | awk -F ' ' '{print $2}'):8888/notebooks/user_data/notebooks"
-    while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[31m`date +%r`\e[39m";tput rc;done 
+    #while 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[31m`date +%r`\e[39m";tput rc; sleep 60;done &
 fi
 
 
