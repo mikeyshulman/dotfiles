@@ -1,6 +1,11 @@
 #aliases that start with g and run git commands, similar stuff in gitconfig
 alias g='git'
 alias gg='git grep'
+#gip () {
+#    git grep $1 | grep import
+#}
+
+
 alias gd='git diff'
 alias gdm='git diff master'
 alias gdmno='git diff master --name -only'
