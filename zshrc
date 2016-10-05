@@ -27,6 +27,7 @@ alias vimrc='vim ~/dotfiles/vimrc'
 alias muxer='tmux source ~/.tmux.conf'
 alias muxrc='vim ~/.tmux.conf'
 alias ipy="ipython --profile=sam"
+alias rmc="sed 's:#.*$::g'"
 alias c='clear'
 alias zsher='source ~/.zshrc'
 alias zshrc='vim ~/dotfiles/zshrc'
