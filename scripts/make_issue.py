@@ -4,6 +4,9 @@ import os
 
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN')
 URL = os.environ.get('GITLAB_URL', 'https://gitlab.kensho.com')
+DEFAULT_PROJECT = os.environ.get('PROJECT', 'notes')
+
+
 
 
 def get_client(private_token=PRIVATE_TOKEN, url=URL):
@@ -19,9 +22,13 @@ def get_projects(gl=None):
     return {p.name: p for p in gl.projects.list()}
 
 
+def get_default_project():
+    return get_projects()[DEFAULT_PROJECT]
+
+
 def create_issue(title, project=None, **kwargs):
     if project is None:
-        project = get_projects()['kensho-learn']
+        project = get_default_project()
     params = dict(title=title)
     params.update(**kwargs)
     issue = project.issues.create(params)
@@ -30,14 +37,14 @@ def create_issue(title, project=None, **kwargs):
 
 def get_issues(project=None):
     if project is None:
-        project = get_projects()['kensho-learn']
+        project = get_default_project()
     return {p.title: p for p in project.issues.list()}
 
 
 def delete_issue(title, project=None, **kwargs):
     raise NotImplementedError
     if project is None:
-        project = get_projects()['kensho-learn']
+        project = get_default_project()
     return project.issues.delete(title, **kwargs)
 
 
