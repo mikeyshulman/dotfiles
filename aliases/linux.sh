@@ -3,15 +3,15 @@ nuc_pip (){
     export PIP_FIND_LINKS=http://${PIP_LINK_HOST}:8080/packages/
     pip install --no-index --trusted-host=${PIP_LINK_HOST} $@
 }
+winfo () {
+}
 
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     setxkbmap -option ctrl:nocaps
     alias kgp='k get pods'
-    winfo () {
-        echo "stty rows $LINES columns $COLUMNS; reset"
+    cexec () {
+        chief exec $@ zsh && stty rows $LINES columns $COLUMNS; reset
     }
-
-    alias cexec="winfo && chief exec"
     alias cnb="winfo && chief exec --env shleifer zsh"
     alias cprod="winfo && chief exec --app flowcast zsh"
 
