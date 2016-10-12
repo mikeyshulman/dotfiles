@@ -5,7 +5,6 @@ alias gg='git grep'
 #    git grep $1 | grep import
 #}
 
-
 alias gd='git diff'
 alias gdm='git diff master'
 alias gdmno='git diff master --name -only'
