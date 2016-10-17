@@ -25,6 +25,7 @@ Plugin 'altercation/vim-colors-solarized'  " New line!!
 " Plugin 'klen/python-mode'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'wincent/command-t'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/kien/ctrlp.vim'
@@ -138,9 +139,34 @@ map <leader>f :NERDTreeToggle<ENTER>
 map <leader>l :CtrlPBuffer<enter>
 set pastetoggle=<leader>z
 
+" Gary Bernhardt: https://www.destroyallsoftware.com/file-navigation-in-vim.html
+set winwidth=84
+" We have to have a winheight bigger than we want to set winminheight. But
+" if
+" " we set winheight to be huge before winminheight, the winminheight set will
+" " fail .
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <expr> <tab> InsertTabWrapper()
+inoremap <s-tab> <c-n>
+
+
+set winheight=5
+set winminheight=5
+set winheight=999
+"
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
+
 " Saving, escaping, quitting
 inoremap jk <ESC>
-"noremap jk <ESC>
 nmap J 10j
 nmap K 10k
 
@@ -149,6 +175,10 @@ nmap Q :q <enter>
 nmap Y y$
 nmap D d$
 noremap ! :mksession! s <CR> :qall!<enter>
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+nnoremap <leader><leader> <c-^>
 
 " auto-update vimrc
 augroup reload_vimrc " {
@@ -195,4 +225,3 @@ endfunction
 
 nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":tabnew") <CR>
 nnoremap <leader>g :call GitGrep() <CR>
-

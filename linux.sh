@@ -1,11 +1,17 @@
+nuc_pip (){
+    export PIP_LINK_HOST=10.1.90.99
+    export PIP_FIND_LINKS=http://${PIP_LINK_HOST}:8080/packages/
+    pip install --no-index --trusted-host=${PIP_LINK_HOST} $@
+}
+
+winfo () {
+    echo "stty rows $LINES columns $COLUMNS; reset"
+}
+
+
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     setxkbmap -option ctrl:nocaps
     alias kgp='k get pods'
-    winfo () {
-        echo "stty rows $LINES columns $COLUMNS; reset"
-    }
-
-    alias cexec="winfo && chief exec"
     alias cnb="winfo && chief exec --env shleifer zsh"
     alias cprod="winfo && chief exec --app flowcast zsh"
 
@@ -16,6 +22,16 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
 
     kd () {
         k describe pods  #"$@"
+    }
+    green-prod-deploy () {
+        docker pull service.green.ml.kensho.xyz:5000/ml/base
+        docker tag service.green.ml.kensho.xyz:5000/ml/base ml/base
+        CONFIG_PATH=~/ml-config/green/equities_config.json ML_SECRETS_DIR=~/ml-secrets/ chief deploy --env prod --app flowcast
+    }
+    green-nb-deploy () {
+        docker pull service.green.ml.kensho.xyz:5000/ml/base
+        docker tag service.green.ml.kensho.xyz:5000/ml/base ml/base
+        ML_SECRETS_DIR=~/ml-secrets/ chief deploy --env shleifer --app notebook
     }
 
     alias dnb="kd | grep '^name.*notebook-shleifer' -i"
@@ -34,4 +50,4 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     #while 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[31m`date +%r`\e[39m";tput rc; sleep 60;done &
 fi
 
-
+unfunction chief

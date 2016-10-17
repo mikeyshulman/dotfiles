@@ -1,6 +1,10 @@
 #aliases that start with g and run git commands, similar stuff in gitconfig
 alias g='git'
 alias gg='git grep'
+#gip () {
+#    git grep $1 | grep import
+#}
+
 alias gd='git diff'
 alias gdm='git diff master'
 alias gdmno='git diff master --name -only'
@@ -26,3 +30,9 @@ vgrep () {
 git-replace() {
   git grep -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
 }
+
+
+gli () {
+    python ~/dotfiles/scripts/make_issue.py $1
+}
+
