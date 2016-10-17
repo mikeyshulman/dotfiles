@@ -4,14 +4,13 @@ nuc_pip (){
     pip install --no-index --trusted-host=${PIP_LINK_HOST} $@
 }
 winfo () {
+    echo stty rows $LINES columns $COLUMNS
 }
+
 
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     setxkbmap -option ctrl:nocaps
     alias kgp='k get pods'
-    cexec () {
-        chief exec $@ zsh && stty rows $LINES columns $COLUMNS; reset
-    }
     alias cnb="winfo && chief exec --env shleifer zsh"
     alias cprod="winfo && chief exec --app flowcast zsh"
 
