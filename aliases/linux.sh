@@ -3,8 +3,9 @@ nuc_pip (){
     export PIP_FIND_LINKS=http://${PIP_LINK_HOST}:8080/packages/
     pip install --no-index --trusted-host=${PIP_LINK_HOST} $@
 }
+
 winfo () {
-    echo stty rows $LINES columns $COLUMNS
+    echo "stty rows $LINES columns $COLUMNS; reset"
 }
 
 
@@ -49,4 +50,4 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     #while 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[31m`date +%r`\e[39m";tput rc; sleep 60;done &
 fi
 
-
+unfunction chief
