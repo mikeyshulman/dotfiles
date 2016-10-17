@@ -26,7 +26,7 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     green-prod-deploy () {
         docker pull service.green.ml.kensho.xyz:5000/ml/base
         docker tag service.green.ml.kensho.xyz:5000/ml/base ml/base
-        CONFIG_PATH= ~/ml_config/green/equities_config.json ML_SECRETS_DIR=~/ml-secrets/ chief deploy --env prod --app flowcast
+        CONFIG_PATH=~/ml-config/green/equities_config.json ML_SECRETS_DIR=~/ml-secrets/ chief deploy --env prod --app flowcast
     }
     green-nb-deploy () {
         docker pull service.green.ml.kensho.xyz:5000/ml/base
