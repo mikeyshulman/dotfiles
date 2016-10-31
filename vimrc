@@ -177,7 +177,9 @@ nmap D d$
 noremap ! :mksession! s <CR> :qall!<enter>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
-map <leader>v :view %%
+"map <leader>l :set background=light <enter>
+"map <leader>d :set background=dark
+
 nnoremap <leader><leader> <c-^>
 
 " auto-update vimrc
