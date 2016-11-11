@@ -16,6 +16,8 @@ export sam='sam@kensho.com'
 alias li='arc lint'
 alias ad="arc diff --verbatim --reviewers='#L'"
 
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.RunningFor}}"' # fro gleb
+
 alias nb='jupyter notebook'
 alias killjobs='kill -9 $(jobs -p)'
 alias rmpyc='find . -iname \*.pyc -delete'
