@@ -126,6 +126,7 @@ nmap t :tabnew  klearn/
 let mapleader = ","
 map <leader>d :r !date<ENTER><esc>
 map <leader>i iimport ipdb; ipdb.set_trace()<ESC>
+map <leader>s iimport ipdb; ipdb.set_trace()<ESC>
 "map <leader>n :bnext<ENTER>
 "map <leader>b :bprev<ENTER>
 map <leader>r :set colorcolumn=100<ENTER>
@@ -225,5 +226,4 @@ function! GitGrep()
   call Selecta("git grep \"" . search . "\"", takeFile, ":tabnew")
 endfunction
 
-nnoremap <leader>s :call Selecta("git ls-files " . expand('%:h'), "", ":tabnew") <CR>
 nnoremap <leader>g :call GitGrep() <CR>
