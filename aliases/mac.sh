@@ -9,5 +9,6 @@ if [[ "$OSTYPE" != 'linux-gnu' ]]; then
     alias mit='cd ~/Dropbox/MIT/ml/repo'
     alias klenv='source ~/flow/kensho-learn/kml/bin/activate'
     source ~/flow/zentreefish/.inenv/inenv.sh
+    alias newtags='ctags -f ~/tags -R ~/flow/kensho-learn/*'
     klenv  # source venv
 fi
