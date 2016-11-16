@@ -10,6 +10,7 @@ alias pt='py.test'
 alias ag='ag --pager less -S --ignore tmp --ignore migrations --ignore fixtures --ignore node_modules --ignore dist --ignore static --ignore webpack-build --ignore js-coverage'
 alias ubt='umask 002; PYTHONPATH=$PWD /usr/bin/time'
 alias dot='cd ~/dotfiles'
+alias tma='tmux a -t'
 
 # Kensho specific
 export sam='sam@kensho.com'
