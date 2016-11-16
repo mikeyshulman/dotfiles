@@ -1,4 +1,7 @@
 
+cexec () {
+    chief exec env LINES=$LINES COLUMNS=$COLUMNS
+}
 
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     setxkbmap -option ctrl:nocaps
@@ -10,6 +13,7 @@ if [[ "$OSTYPE" == 'linux-gnu' ]]; then
     kube-cp () {  # copy $1 to $2
         tar zcf - $1 | kubectl exec -i $2 tar zxvf -
     }
+
 
     kd () {
         k describe pods  #"$@"
