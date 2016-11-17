@@ -67,7 +67,7 @@ set tags=~/tags
 "FOLDING
 set hidden
 " set foldmethod=indent
-set foldlevelstart=1
+set foldlevelstart=100
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 let g:SimpylFold_docstring_preview = 1
