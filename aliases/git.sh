@@ -12,6 +12,8 @@ alias gwho='git config --list'
 alias dbranch='git branch -d'
 alias gcm='git checkout master'
 alias gcam='git commit -am '
+
+alias gboom='git commit -am "boom boom"'
 alias gs='git status -sb'
 alias gpom='git pull origin master'
 alias gdmo='git diff master --name-only'

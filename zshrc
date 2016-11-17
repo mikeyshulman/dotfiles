@@ -3,6 +3,7 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 
 alias san='cd ~/flow/santander'
+alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
 alias pyg='pip freeze | grep'
 alias pg='ps aux | grep'
