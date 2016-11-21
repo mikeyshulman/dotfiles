@@ -3,6 +3,9 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 
 alias san='cd ~/flow/santander'
+alias rsan='PYTHONPATH='.' python code/sam_filter.py'
+alias ts='PYTHONPATH='.' py.test code/test_hash_filter.py'
+
 alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
 alias pyg='pip freeze | grep'
