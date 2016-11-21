@@ -1,6 +1,6 @@
 
-cexec () {
-    chief exec env LINES=$LINES COLUMNS=$COLUMNS
+alias cexec='chief exec env LINES=$LINES LINES=$COLUMNS'
+
 }
 
 if [[ "$OSTYPE" == 'linux-gnu' ]]; then
