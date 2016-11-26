@@ -24,7 +24,7 @@ Plugin 'altercation/vim-colors-solarized'  " New line!!
 " Above requires lots of work
 " Plugin 'klen/python-mode'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'wincent/command-t'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
