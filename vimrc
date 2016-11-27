@@ -74,6 +74,9 @@ let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 1
 let g:SimpylFold_fold_docstring = 1
 
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 
 set history=64   " keep 64 lines of command line history
 set ruler    " show the cursor position all the time
