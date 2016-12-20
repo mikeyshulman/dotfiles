@@ -12,6 +12,7 @@
 "   05. Custom Commands ......... Any custom command aliases                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set cursorline
 set nocompatible              " be iMproved, required
 set backspace=indent,eol,start
 filetype off                  " required
