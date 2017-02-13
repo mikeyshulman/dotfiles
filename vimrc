@@ -12,6 +12,7 @@
 "   05. Custom Commands ......... Any custom command aliases                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set cursorline
 set nocompatible              " be iMproved, required
 set backspace=indent,eol,start
 filetype off                  " required
@@ -24,7 +25,7 @@ Plugin 'altercation/vim-colors-solarized'  " New line!!
 " Above requires lots of work
 " Plugin 'klen/python-mode'
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'wincent/command-t'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
@@ -73,6 +74,9 @@ autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 let g:SimpylFold_docstring_preview = 1
 let g:SimpylFold_fold_import = 1
 let g:SimpylFold_fold_docstring = 1
+
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 
 set history=64   " keep 64 lines of command line history

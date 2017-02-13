@@ -51,7 +51,6 @@ prun () {
 
 utest () {
     py.test tests/test_*.py  --tb=short "$@";
-    find . -iname \*.pyc -delete
 }
 
 

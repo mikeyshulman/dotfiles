@@ -1,4 +1,8 @@
 if [[ "$OSTYPE" != 'linux-gnu' ]]; then
+    alias md='open -a MacDown'
+    alias san='cd ~/flow/santander'
+    alias rsan='PYTHONPATH='.' python code/sam_filter.py'
+    alias ts='PYTHONPATH='.' py.test code/test_hash_filter.py'
     alias svrunner='runsvdir -P /usr/local/var/service'
     alias mfree="top -l 1 -s 0 | grep PhysMem" 
     # The next line updates PATH for the Google Cloud SDK.

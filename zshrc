@@ -2,10 +2,12 @@ source ~/.secrets.sh
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
-alias san='cd ~/flow/santander'
+
 alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
 alias pyg='pip freeze | grep'
+alias gall='git add --all'
+
 alias pg='ps aux | grep'
 alias kl=$kl
 alias pt='py.test'
