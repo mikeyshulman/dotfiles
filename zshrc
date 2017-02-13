@@ -27,6 +27,7 @@ alias rmpyc='find . -iname \*.pyc -delete'
 
 
 #misc aliases
+alias size-half='stty rows 93 columns 243; reset'
 alias v='vim'
 alias vimrc='vim ~/dotfiles/vimrc'
 alias muxer='tmux source ~/.tmux.conf'
