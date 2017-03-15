@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/shleifer/flow/kensho-learn/klearn/features'
+let g:netrw_dirhist_2='/Users/shleifer/flow/kensho-learn/service/baml_rates_flowcast'
+let g:netrw_dirhist_3='/Users/shleifer/flow/kensho-learn/service/beq_flowcast'
+let g:netrw_dirhist_4='/Users/shleifer/flow/kensho-learn/klearn/flowcast'
+let g:netrw_dirhist_5='/Users/shleifer/flow/kensho-learn/klearn/rates'
+let g:netrw_dirhist_6='/Users/shleifer/flow/kensho-learn/klearn/ingest'
+let g:netrw_dirhist_7='/Users/shleifer/.jupyter'
+let g:netrw_dirhist_8='/Users/shleifer/.jupyter/nbconfig'
