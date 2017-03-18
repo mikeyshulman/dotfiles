@@ -7,16 +7,15 @@ alias gg='git grep'
 
 alias gd='git diff'
 alias gdm='git diff master'
-alias gdmno='git diff master --name -only'
 alias gwho='git config --list'
 alias dbranch='git branch -d'
-alias gcm='git checkout master'
+alias gcom='git checkout master'
 alias gcam='git commit -am '
-
 alias gboom='git commit -am "boom boom"'
+
 alias gs='git status -sb'
 alias gpom='git pull origin master'
-alias gdmo='git diff master --name-only'
+alias gdf='git --no-pager diff master --name-only'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias undo='git reset --soft HEAD^'
 alias pcheck='git diff master | grep print'
