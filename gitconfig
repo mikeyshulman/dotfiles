@@ -32,6 +32,7 @@
 	editor = vim
 	mergeoptions = --no-edit
 	excludesfile = /Users/shleifer/.gitignore_global
+	pager = 
 [mergetool "meld"]
 	path = /Applications/meld.app
 [diff]
