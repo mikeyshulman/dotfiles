@@ -16,7 +16,7 @@ alias gboom='git commit -am "boom boom"'
 alias gs='git status -sb'
 alias gpom='git pull origin master'
 alias gdf='git --no-pager diff master --name-only'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | head -20"
 alias undo='git reset --soft HEAD^'
 alias pcheck='git diff master | grep print'
 alias gitrc='vim ~/aliases/git.sh'

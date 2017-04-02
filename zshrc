@@ -41,7 +41,7 @@ alias rmc="sed 's:#.*$::g'"
 alias c='clear'
 alias zsher='source ~/.zshrc'
 alias zshrc='vim ~/dotfiles/zshrc'
-
+alias lhbig='ls -lh **/*(Lm+20)'
 # title tabs
 function title {
     echo -ne "\033]0;"$*"\007"
