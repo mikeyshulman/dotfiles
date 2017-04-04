@@ -7,6 +7,7 @@ alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
 alias pyg='pip freeze | grep'
 alias gall='git add --all'
+alias lsbig='ls -lhS **/*(Lm+20)'
 
 alias pg='ps aux | grep'
 alias kl=$kl
