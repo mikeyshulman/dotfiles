@@ -5,6 +5,8 @@ HISTSIZE=1000000
 alias pmbs="p post_baml_flowcast MBS --to sam@kensho.com"
 alias prates="p post_baml_flowcast RATES --to sam@kensho.com"
 alias tm='t mbs_model --runslow -s'
+alias pmbs="p run_ficc_flowcast MBS --to sam@kensho.com"
+alias prates="p run_ficc_flowcast RATES --to sam@kensho.com"
 
 alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
