@@ -4,6 +4,7 @@ HISTSIZE=1000000
 
 alias pmbs="p post_baml_flowcast MBS --to sam@kensho.com"
 alias prates="p post_baml_flowcast RATES --to sam@kensho.com"
+alias tm='t mbs_model --runslow -s'
 
 alias xmo='xmodmap ~/.xmodmaprc'
 alias k='kubectl' 
@@ -55,8 +56,6 @@ function title {
 
 ZSH_THEME="robbyrussell"
 export EDITOR=vim
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 plugins=(git python web-search)
 # git: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 # python: https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/python/python.plugin.zsh
@@ -65,5 +64,7 @@ plugins=(git python web-search)
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+#export PATH=/usr/local/Cellar/gcc/5.3.0/bin:$PATH
 for f in ~/dotfiles/aliases/*; do source $f; done
 title `hostname`:`whoami`
