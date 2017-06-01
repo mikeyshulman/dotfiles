@@ -31,7 +31,6 @@
 [core]
 	editor = vim
 	mergeoptions = --no-edit
-	pager = 
 [mergetool "meld"]
 	path = /Applications/meld.app
 [diff]
