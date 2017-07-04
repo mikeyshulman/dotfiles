@@ -32,7 +32,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'https://github.com/kien/ctrlp.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'fatih/vim-go'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 " Plugin 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-surround.git'
@@ -136,7 +136,7 @@ map <leader>s iimport ipdb; ipdb.set_trace()<ESC>
 map <leader>r :set colorcolumn=100<ENTER>
 map <leader>1 :set invnu<enter>
 map <leader>c :bp <BAR> bd #<enter>
-map <leader>m :noh <enter>
+map <leader>m :tabnew klearn/mbs/model/
 map <leader>a <plug>NERDTreeTabsToggle<CR>
 map <leader>t :tabnew tests/test_
 map <leader>f :NERDTreeToggle<ENTER>
