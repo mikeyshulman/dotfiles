@@ -2,7 +2,7 @@
 	default = simple
 [user]
 	name = sshleifer
-	email = sam@kensho.com
+	email = sam@kensho.com\n
 [alias]
         la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
         g= grep

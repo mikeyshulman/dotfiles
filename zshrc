@@ -6,6 +6,8 @@ alias pmbs="p post_baml_flowcast MBS --to sam@kensho.com"
 alias venv3='source ~/flow/py3_venv/bin/activate'
 alias prates="p post_baml_flowcast RATES --to sam@kensho.com"
 alias tm='t mbs_model --runslow -s'
+alias tr='t rates_model --runslow -s'
+
 alias pmbs="p run_ficc_flowcast MBS --to sam@kensho.com"
 alias prates="p run_ficc_flowcast RATES --to sam@kensho.com"
 
