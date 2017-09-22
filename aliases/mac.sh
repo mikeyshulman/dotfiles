@@ -1,6 +1,7 @@
 if [[ "$OSTYPE" != 'linux-gnu' ]]; then
     alias md='open -a MacDown'
     alias san='cd ~/flow/santander'
+    alias plake='git push lake master'
     alias rsan='PYTHONPATH='.' python code/sam_filter.py'
     alias ts='PYTHONPATH='.' py.test code/test_hash_filter.py'
     alias svrunner='runsvdir -P /usr/local/var/service'
