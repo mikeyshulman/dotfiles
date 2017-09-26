@@ -1,6 +1,7 @@
 source ~/.secrets.sh
 HISTFILESIZE=1000000
 HISTSIZE=1000000
+alias tarunzip='tar -xzvf'
 alias od='cd ~/tensorflow/tensorflow/models/object_detection'
 zstyle ':completion:*' hosts off
 alias pmbs="p post_baml_flowcast MBS --to sam@kensho.com"
@@ -71,7 +72,6 @@ plugins=(git python web-search)
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 source ~/.secrets.sh
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 #export PATH=/usr/local/Cellar/gcc/5.3.0/bin:$PATH
 for f in ~/dotfiles/aliases/*; do source $f; done
 title `hostname`:`whoami`

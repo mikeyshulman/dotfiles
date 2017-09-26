@@ -13,6 +13,7 @@ if [[ "$OSTYPE" != 'linux-gnu' ]]; then
     source "${HOME}/google-cloud-sdk/completion.zsh.inc"
     alias mit='cd ~/Dropbox/MIT/ml/repo'
     alias klenv='source ~/flow/kensho-learn/kml/bin/activate'
+    export PATH="/Users/shleifer/flow/kensho-learn/kml/bin:/Users/shleifer/google-cloud-sdk/bin:/Users/shleifer/.nvm/versions/node/v5.7.1/bin:/Users/shleifer/google-cloud-sdk/bin:/Users/shleifer/google-cloud-sdk/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/Users/shleifer/flow/arcanist/bin:/Users/shleifer/flow/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shleifer/flow/arcanist/bin:/Users/shleifer/flow/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shleifer/flow/arcanist/bin:/Users/shleifer/flow/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/~/flow/kensho-learn/kml/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
     source ~/flow/zentreefish/.inenv/inenv.sh
     alias newtags='ctags -f ~/tags -R ~/flow/kensho-learn/*'
     klenv  # source venv
