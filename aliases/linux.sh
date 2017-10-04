@@ -11,7 +11,7 @@ winfo () {
 
 
 USER_SHORT=${USER%%-*}
-PROJECT=${USER##*-}
+# PROJECT=${USER##*-}
 ML_SECRET_DIR=/home/${USER}/src/ml_secrets/notebooks
 #export PIP_LINK_HOST=10.1.90.99
 #export PIP_FIND_LINKS=http://${PIP_LINK_HOST}:8080/packages/
