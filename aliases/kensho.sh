@@ -52,7 +52,13 @@ prun () {
 utest () {
     py.test tests/test_*.py  --tb=short "$@";
 }
+tficc () {
+    py.test tests/test_mbs_model.py --tb=short -s "$@"
+    py.test tests/test_rates_model.py --tb=short -s "$@"
+}
 
+alias tm='t mbs_model --runslow -s'
+alias tr='t rates_model --runslow -s'
 
 #kensho-learn py.test
 alias rmt='py.test tests/test_mbs.py --tb=short'
