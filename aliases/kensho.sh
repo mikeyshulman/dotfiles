@@ -50,7 +50,7 @@ prun () {
 }
 
 utest () {
-    py.test tests/test_*.py  --tb=short "$@";
+    py.test tests/test_*.py  --tb=short --duration=10"$@";
 }
 tficc () {
     py.test tests/test_mbs_model.py --tb=short -s "$@"
