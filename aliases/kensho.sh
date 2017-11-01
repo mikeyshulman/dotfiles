@@ -4,6 +4,11 @@ vk () {
     vim klearn/$fname.py 
 }
 
+s3ts () {
+    fname=$1
+    shift
+    s3cmd get -r s3://kensho-timeseries-data/BAML/$fname ~/flow/baml_s3/ "$@"
+}
 
 run_tsdb() {
     cd ~/flow/zentreefish/projects/tsdb/app;
@@ -50,7 +55,7 @@ prun () {
 }
 
 utest () {
-    py.test tests/test_*.py  --tb=short --duration=10"$@";
+    py.test tests/test_*.py  --tb=short --duration=10  "$@";
 }
 tficc () {
     py.test tests/test_mbs_model.py --tb=short -s "$@"

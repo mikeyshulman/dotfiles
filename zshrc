@@ -73,3 +73,6 @@ source ~/.secrets.sh
 #export PATH=/usr/local/Cellar/gcc/5.3.0/bin:$PATH
 for f in ~/dotfiles/aliases/*; do source $f; done
 title `hostname`:`whoami`
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
