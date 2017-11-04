@@ -44,11 +44,16 @@ tinfo () {
     py.test tests/test_$fname.py::$text --tb=short --maxfail=1  "$@"
 }
 
-
 p () {
     fname=$1
     shift
     PYTHONPATH=$PYTHONPATH:$PWD python klearn/$fname.py "$@"
+}
+
+pd () {
+    fname=$1
+    shift
+    PYTHONPATH=$PYTHONPATH:$PWD python -m pdb klearn/$fname.py "$@"
 }
 prun () {
     PYTHONPATH=$PYTHONPATH:$PWD python klearn/run.py --to sam@kensho.com  "$@"
@@ -57,9 +62,11 @@ prun () {
 utest () {
     py.test tests/test_*.py  --tb=short --duration=10  "$@";
 }
+
 tficc () {
-    py.test tests/test_mbs_model.py --tb=short -s "$@"
+    py.test tests/test_em.py --tb=short -s "$@"
     py.test tests/test_rates_model.py --tb=short -s "$@"
+    py.test tests/test_mbs_model.py --tb=short -s "$@"
 }
 
 alias tm='t mbs_model --runslow -s'
