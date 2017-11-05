@@ -69,6 +69,13 @@ tficc () {
     py.test tests/test_mbs_model.py --tb=short -s "$@"
 }
 
+inf() {
+    while :
+    do
+	    "$@" 
+    done  
+}
+
 alias tm='t mbs_model --runslow -s'
 alias tr='t rates_model --runslow -s'
 
