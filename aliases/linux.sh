@@ -8,6 +8,10 @@ winfo () {
     echo "stty rows $LINES columns $COLUMNS; reset"
 }
 
+memlog () {
+    dmesg -T | tail -60
+}
+
 
 
 USER_SHORT=${USER%%-*}
