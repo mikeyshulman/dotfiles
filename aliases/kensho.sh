@@ -15,7 +15,12 @@ run_tsdb() {
     inenv tsdb;
     ./run_tsdb.py
 }
-
+tchange () {
+    ag -l | entr -s  "$@"
+}
+tchange_ficc () {
+    tchange '~/dotfiles/ficc_test_runner.sh'
+}
 
 function vt {
     fname=$1
